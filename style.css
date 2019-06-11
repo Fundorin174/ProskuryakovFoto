@@ -140,6 +140,7 @@ section:not(:first-child){
   display: flex;
   flex-direction: row;  
   align-content: center;
+  margin-top: 50px;
 }
 .left_about {
 flex: 1;
@@ -168,20 +169,103 @@ align-items: flex-start;
   .service_cards{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 50px;
   }
 
 .service_cards .card{
+  display: flex;
+  flex-direction: column;
 width: 25%;
-min-height: 300px;
+min-height: 500px;
 border: 1px solid #446044;
+justify-content: space-between;
+align-items: stretch;
+min-width: 220px;
+margin-left: 20px;
+margin-right: 20px;
+margin-bottom: 30px;;
 }  
 
+.service_cards .card img{
+  margin: 30px auto 50px auto;
+}
+
+.service_cards .card h3{
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.service_cards .card p{
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.service_cards .card form{
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.service_cards .card input{
+  height: 30px;
+  background-color: #c4b31b;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.service_cards .card input:hover{
+  background-color: #123163;
+  color: #fff;
+}
+
+.description h3, .service_pro h3{
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.description p, .service_pro{
+  font-size: 1.2em;
+  margin: 30px 15% 30px 15%;
+  text-align: justify;
+}
+
+.service_pro .second_p{
+margin-top: 20px;
+}
+
+.description .bold{
+  font-weight: bolder;
+  font-size: 1.3em;
+}
+
+.tutorial {
+  background-color: #d18242;
+  font-size: 1.5em;
+  padding: 20px 0;
+}
+
+.tutorial p{
+  width: 80%;
+ margin:0 auto;
+}
 
 
 
 
 
 /* Мобильный вид */
+
+
+@media all and (max-width: 800px){
+/* Сдвиг карточек услуг */
+  .service_cards{
+    flex-wrap: wrap;
+}
+}
 
   /* Титульный блок */
 
@@ -275,5 +359,14 @@ border: 1px solid #446044;
     font-size: 1em;
   }
 
+/* Блок услуги */
 
+.service_cards{
+  flex-direction: column;
+  align-items: center;
+}
+
+.service_cards .card{
+  width: 70%;
+}
 }
