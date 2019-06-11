@@ -6,7 +6,7 @@
 a {
   text-decoration: none;
   list-style: none;
-  color: #000;
+  color: #fff;
 }
 
 body {
@@ -20,10 +20,11 @@ body {
   padding: 20px;
   align-items: center;
   position: fixed;
-  background-color: #fff;
+  background-color: #000;
   width: 100%;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 0.7;
+
 }
 
 .header_left{
@@ -49,7 +50,7 @@ nav .links a{
  }
 
  .link:hover{
-  border: 1px solid #000;
+  border: 1px solid #fff;
   /* margin: 5px 5px; */
  }
 
@@ -60,15 +61,12 @@ nav .links a{
 /* Секции */
 section{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+
 }
 
-section:nth-child(odd) {
-  background-color: blue;
-}
-
-section:nth-child(even) {
-  background-color: #00ffff;
+section:not(:first-child){
+  padding-top: 80px;
 }
 
 /* Титульная страница */
@@ -97,7 +95,7 @@ section:nth-child(even) {
 }
 
 .titul_icons img:hover{
-  border: 2px solid #000;
+  border: 2px solid #446044;
   border-radius: 50%;
 }
 
@@ -105,9 +103,11 @@ section:nth-child(even) {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  font-size: 3em;
+  font-size: 2em;
   flex: 1.5;
   color: #000;
+  font-family: 'Lobster', cursive;
+  text-transform: uppercase;
 }
 
 .first_line{
@@ -124,6 +124,59 @@ section:nth-child(even) {
   width: 150px;
   height: 50px;
 }
+
+/* Блок ОБО МНЕ */
+.main_about{
+  display: flex;
+  flex-direction: column;
+}
+.headline{
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+.about_block{
+  display: flex;
+  flex-direction: row;  
+  align-content: center;
+}
+.left_about {
+flex: 1;
+margin-left: 20px;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+}
+
+.left_about img{
+  max-width: 70%;
+  max-height: 90vh;
+}
+
+.right_about {
+  flex: 1;
+  font-size: 1.2em;
+  }
+
+
+
+
+
+
+  /* Услуги */
+  .service_cards{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+.service_cards .card{
+width: 25%;
+min-height: 300px;
+border: 1px solid #446044;
+}  
+
+
 
 
 
@@ -159,7 +212,7 @@ section:nth-child(even) {
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #178da8;
+    background-color: #bfccbf;
     border-radius: 50%;
     margin-left: 5px;
     margin-right: -15px;
@@ -193,7 +246,7 @@ section:nth-child(even) {
   }
   
   .links a:nth-child(6):hover{
-    border: 1px solid #000;
+    border: 1px solid #446044;
   }
   /* Активное меню */
   .menu_btn_active span{
@@ -212,4 +265,15 @@ section:nth-child(even) {
   .titul_down_block p{
     color: #fff;
   }
+
+  /* Блок Обо мне */
+  .about_block{
+    flex-direction: column;
+  }
+  .right_about{
+    margin: 20px;
+    font-size: 1em;
+  }
+
+
 }
