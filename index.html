@@ -33,7 +33,7 @@
                <a href="#main_service">Услуги</a>
              </div>
              <div class="link">
-               <a href="#">Связаться</a>
+               <a href="#main_contacts">Связаться</a>
              </div>
              
                <!-- Кнопка -->
@@ -116,7 +116,9 @@
 
     </section>
     <section class="main_gallery">Галлерея работ</section>
-    <section class="main_parallax">Умная фраза</section>
+    <section class="main_parallax">
+      <p> &#171&nbsp;Запечатлённые моменты настоящего вдохновят вас в будущем&nbsp;&#187;</p>
+    </section>
     <section class="main_service" id="main_service">
       <div class="headline">
         <h2>Пакеты услуг</h2>
@@ -129,7 +131,7 @@
           <p>До 200 фотографий</p>
           <p>(*Доступен за 
             45 дней до даты)</p>
-          <form method="LINK" action="#">
+          <form method="LINK" action="#main_contacts">
           <input type="submit" value="Заказать">
       </form>
         </div>
@@ -138,7 +140,7 @@
             <h3>Классический</h3>
             <p>С утра и до конца 2-го часа банкета</p>
             <p>400-500 фотографий</p>
-            <form method="LINK" action="#">
+            <form method="LINK" action="#main_contacts">
               <input type="submit" value="Заказать">
           </form>
         </div>
@@ -147,7 +149,7 @@
             <h3>Полный день</h3>
             <p>Полный свадебный день до 23.00</p>
             <p>600-700 фотографий</p>
-            <form method="LINK" action="#">
+            <form method="LINK" action="#main_contacts">
               <input type="submit" value="Заказать">
           </form>
         </div>
@@ -180,7 +182,78 @@
 
 
     </section>
-    <section class="main_contacts">Контактная форма</section>
+    <section class="main_contacts" id="main_contacts">
+      <div class="contacts_up">
+        <div class="headline">
+          <h2>Оформить заказ, <br> забронировать дату</h2>
+        </div>        
+        <p>Не стесняйтесь, задавайте любые вопросы, я отвечу очень быстро.</p>
+      </div>
+      <div class="contacts_down">
+        <div class="contacts_info">
+          <div class="fone">
+            <div class="fone_img">
+              <img src="img/whatsapp.png" alt="WhatsApp">
+              <img src="img/viber.png" alt="Viber">
+              <img src="img/telegram.png" alt="Telegram">
+            </div>
+            <div class="number">
+                +7 (951) 874-33-15 <br>
+                +7 (900) 954-38-47 (Менеджер)
+            </div>
+
+          </div>
+          <div class="email">
+              fotorom@icloud.com
+          </div>
+          <div class="icons">
+              <div class="contact_icons">
+                  <a href="https://vk.com/romanprosku" target="blank"><img src="img/vk.png" alt="VK"></a>
+                </div>
+                <div class="contact_icons">
+                  <a href="https://www.instagram.com/rprosku/" target="blank"><img src="img/Instagram.png" alt="Instagramm"></a>
+                </div>
+          </div>
+        </div>
+        <div class="form_1">
+             
+              <div class="right_box">
+              <input id="name" type="text" name="name" placeholder="Как к Вам обращаться?">          
+              </div>
+      
+              <div class="right_box">
+              <input id="fone" type="tel" name="fone" required placeholder="Телефон">          
+              </div>
+
+              <div class="right_box">
+              <input id="email" type="email" name="email" required placeholder="E-mail (по желанию)">          
+              </div>
+
+              <div class="rigth_align">
+               <label class="rigth_align" for="month">Дата мероприятия:</label>  
+              </div>
+
+              <div class="right_box">
+                <input id="month" type="date" name="month">
+              </div>
+
+            
+            <div class="history">
+              <textarea name="history" id="history" cols="30" rows="5" placeholder="Ваше сообщение..."></textarea>       
+            </div>
+      
+            <div class="button_box">
+            <input class="button" id="submit" type="submit" value="Отправить">          
+            </div>
+      
+            </form>
+      
+           
+      
+        </div>
+      </div>
+
+    </section>
   </main>
 
   <!-- footer -->

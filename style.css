@@ -134,7 +134,7 @@ section:not(:first-child){
   text-align: center;
   font-family: 'Lobster', cursive;
   text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 .about_block{
   display: flex;
@@ -188,6 +188,7 @@ margin-bottom: 30px;;
 
 .service_cards .card img{
   margin: 30px auto 50px auto;
+  border-radius: 20%;
 }
 
 .service_cards .card h3{
@@ -253,6 +254,63 @@ margin-top: 20px;
  margin:0 auto;
 }
 
+/* Блок с фразой */
+
+.main_parallax{
+  background: url(img/main_parallax.jpg) no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.main_parallax p{
+  color: #fff;
+  font-size: 1.7em;
+  width:45%;
+  margin-bottom: 50px;
+  margin-left: 5%;
+}
+
+.main_contacts{
+  background-color: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_contacts .contacts_up{
+  width: 80%;
+}
+
+.main_contacts .contacts_up p{
+  margin: 40px auto;
+  text-align: center;
+}
+
+.contacts_down{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ }
+
+ .contacts_info{
+   flex: 1;
+ }
+ .form_1{
+   flex: 1;
+ }
+
+ .fone_img img {
+   width: 30px;
+   margin-left: 10px;
+ }
+
+ .contact_icons img{
+  width: 30px;
+  margin-left: 10px;
+ }
 
 
 
