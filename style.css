@@ -387,6 +387,7 @@ section:not(:first-child) {
   width: 46px;
 }
 
+/* ФОРМА */
 .main_form {
   flex: 1;
   min-width: 300px;
