@@ -17,7 +17,7 @@ body {
 .header_main {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   align-items: center;
   position: fixed;
   background-color: #000;
@@ -166,11 +166,52 @@ section:not(:first-child) {
   font-size: 1.2em;
 }
 
+/* БЛОК РАБОТЫ */
+
+#main_gallery {
+  padding-top: 64px;
+}
+.main_gallery .head_gallery{
+  background-color: #212121;
+  color: #fff;
+  width: 100%;
+  height: 70px;
+  padding-top: 30px; 
+}
+
+.main_gallery .head_gallery h2{
+  font-size: 2em;
+  letter-spacing: 3px;
+}
+
+.photoalbums{
+display: flex;
+width: 100%;
+flex-direction: row;
+flex-wrap: wrap;
+}
+.photoalbum{
+  width:50%;
+  text-align: center;
+}
+
+.photoalbum p{
+  position: relative;
+  top: -50%;
+  color: #570560;
+  font-weight: 800;
+  font-size: 1.4em;
+}
 
 
+.photoalbum a{
+  display: inline-block;
+  width:100%;
+}
 
-
-
+.photoalbum a img{
+  width: 100%;
+}
 /* Услуги */
 .service_cards {
   display: flex;
@@ -446,7 +487,7 @@ textarea {
 
 .footer_main {
   display: flex;
-  background-color: #000;
+  background-color: #212121;
   color: #fff;
   font-size: 0.7em;
   justify-content: space-between;
@@ -597,6 +638,25 @@ color: #000;
     margin: 20px;
     font-size: 1em;
   }
+
+  /* Блок Работы */
+.photoalbums{
+flex-direction: column;
+}
+
+.photoalbum{
+  width:100%;
+}
+
+.photoalbums a{
+  width: 100%;
+}
+
+.photoalbum p{
+  position: relative;
+  top: -150px;
+
+
 
   /* Блок услуги */
 
