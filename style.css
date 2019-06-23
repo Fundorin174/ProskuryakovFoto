@@ -92,6 +92,7 @@ section:not(:first-child) {
   position: relative;
   margin-top: 3vh;
   margin-left: 10%;
+  z-index: 1;
 }
 
 .titul_icons img:hover {
@@ -124,7 +125,7 @@ section:not(:first-child) {
 }
 
 .narrow img {
-  width: 150px;
+  max-width: 150px;
   height: 50px;
 }
 
@@ -195,16 +196,19 @@ flex-wrap: wrap;
   text-align: center;
 }
 
-.photoalbum p{
+.photoalbum .portfolio_title{
   position: relative;
   top: -50%;
-  color: #570560;
+  color: #fff;
   font-weight: 800;
   font-size: 1.4em;
 }
 
+.portfolio_title span{
+  background: rgba(0, 0, 0, 0.2);
+}
 
-.photoalbum a{
+.photoalbum .photohref{
   display: inline-block;
   width:100%;
 }
@@ -539,6 +543,10 @@ color: #000;
   .service_cards {
     flex-wrap: wrap;
   }
+
+  nav .links a{
+    font-size: 0.8em;
+  }
 }
 
 /* Титульный блок */
@@ -548,33 +556,49 @@ color: #000;
   .header_main {
     display: flex;
     justify-content: space-between;
-  }
-
-  .header_right {
-    flex: 1;
-    height: 50px;
-    position: fixed;
-    margin-left: 80vw;
+    background-color: rgba(0,0,0,0);
   }
 
   .header_left {
-    flex: 1;
-
+    display:none;
   }
-
-  .links a {
+  /* .links a {
     display: none;
+  } */
+
+  .menu_nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
   }
 
+  /* Всплывающее меню */
+  .header_right .links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 1.5em;
+    padding: 15px 5px 15px 15px;
+    transition: 0.5s;
+    transform-origin: 120% 15%;
+    transform: scale(0);
+  }
 
-  .links a:nth-child(6) {
+  .header_right .links_active{
+    transition: 0.5s;
+    transform-origin: 120% 15%;
+    transform: scale(1);
+  }
+  #menu_btn {
     display: block;
     width: 50px;
     height: 50px;
     background-color: #bfccbf;
     border-radius: 50%;
-    margin-left: 5px;
-    margin-right: -15px;
+    position: relative;
+    /* margin-left: 5px; */
+    margin-right: 20px;
 
   }
 
@@ -582,6 +606,7 @@ color: #000;
   .menu_btn span,
   .menu_btn span::before,
   .menu_btn span::after {
+    display: block;
     position: absolute;
     top: 50%;
     margin-top: -1px;
@@ -595,7 +620,6 @@ color: #000;
   .menu_btn span::before,
   .menu_btn span::after {
     content: '';
-    display: block;
     transition: 0.5s;
   }
 
@@ -612,19 +636,49 @@ color: #000;
   }
 
   /* Активное меню */
-  .menu_btn_active span {
+  /* .menu_btn_active span {
     height: 0;
-  }
+  } */
 
   .menu_btn_active span::before {
-    transform: rotate(45deg);
+    transform: rotate(35deg);
+    width: 10px;
+    transform-origin: left bottom;
   }
 
   .menu_btn_active span::after {
-    transform: rotate(-45deg);
+    transform: rotate(-35deg);
+    width: 10px;
+    transform-origin: left top;
+
   }
 
   /* Титульный блок */
+  .headline{
+    font-size: 1.2em;
+  }
+
+  .service_pro, .description{
+    font-size: 1em;
+  }
+
+
+
+.titul_down{
+  align-items: center;
+  font-size: 1.4em;
+}
+.first_line{
+  width: 70%;
+  text-align: center;
+}
+
+.narrow img {
+  max-width: 50px;
+  height: 20px;
+}
+
+
   .titul_down_block p {
     color: #fff;
   }
@@ -648,11 +702,11 @@ flex-direction: column;
   width:100%;
 }
 
-.photoalbums a{
+.photoalbums .photohref{
   width: 100%;
 }
 
-.photoalbum p{
+.photoalbum .portfolio_title{
   position: relative;
   top: -150px;
 
