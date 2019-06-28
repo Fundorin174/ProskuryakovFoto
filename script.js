@@ -31,5 +31,15 @@ function appearingMenu() {
   document.getElementById('Topnav').classList.toggle('links_active');
 } 
 
+// Прослушка события смены размера экрана
+window.addEventListener("resize", function() {
+  // Задаем переменную с состоянием активного меню
+let elementClasses = Topnav.classList.contains( 'links_active');
+//Если меню активно, закрываем его
+if (elementClasses === true) {
+  appearingMenu();
+      menuStart();
+}
 
+}, false);
 
